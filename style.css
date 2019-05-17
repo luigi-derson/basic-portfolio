@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto+Mono|Work+Sans:400,700');
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:400,700');
 
 * {
   padding: 0;
@@ -11,20 +11,122 @@ body, html {
   line-height: 1.5;
 }
 
-nav {
-  /* position: fixed; */
-  font-size: 1.5em;
-  font-weight: 700;
-}
-
 a {
   text-decoration: none;
 }
 
-.logo {
-
+nav {
+  position: fixed;
+  font-size: 1.5em;
+  font-weight: 700;
+  width: 100%;
+  z-index: 99;
+  border-bottom: 1px solid black;
 }
+
+.menu {
+  display: flex;
+  justify-content: flex-start;
+  padding: 2em 5em 1em;
+}
+
+nav ul {
+  margin-left: auto;
+}
+
+nav ul li{
+  list-style: none;
+  display: inline-block;
+  margin-left: 1.25rem;
+}
+
 
 nav img {
   height: 1.25em;
+  margin-right: 1.25rem;
+}
+
+.intro {
+  /* border: 1px solid black; */
+  top: 0;
+  min-height: 65vh;
+  padding-top: 35vh;
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+
+.greet {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5em;
+}
+
+.line {
+  width: 1em;
+  height: 9em;
+  background-color: #140A82;
+  margin-right: 1rem;
+}
+
+h1 {
+  font-size: 5em;
+  line-height: 1;
+}
+
+.hand {
+  font-size: 3rem;
+}
+
+.designer p {
+  margin-top: 1em;
+  width: 390px;
+  font-size: 1.125rem;
+}
+
+.welcome {
+  font-weight: 700;
+  font-size: 1.5em;
+}
+
+.dev {
+  font-family: monospace;
+  font-size: 1.125rem;
+}
+
+.dev p {
+  width: 390px;
+
+}
+
+.begginer {
+  font-size: 1.5em;
+}
+
+.web {
+  font-size: 6em;
+  line-height: 1;
+}
+
+.line-two {
+  width: 9em;
+  height: 0.7em;
+  background-color: #140A82;
+  margin: 1rem 0 1.5rem;
+}
+
+/* .yellow {
+  background-color: #FFE395;
+  height: 1600px;
+  width: 650px;
+  transform: rotate(-45deg);
+  position: absolute;
+  right: 0;
+  z-index: 0;
+} */
+
+.project-card img {
+  width: 25%;
 }
