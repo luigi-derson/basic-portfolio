@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Work+Sans:400,700');
+@import url('https://fonts.googleapis.com/css?family=Quicksand:700|Work+Sans&display=swap');
 
 * {
   padding: 0;
@@ -11,17 +11,24 @@ body, html {
   line-height: 1.5;
 }
 
-a {
+a, a:visited {
   text-decoration: none;
+  color: #140A82;
+}
+
+a:hover {
+  color: #f50a14;
 }
 
 nav {
   position: fixed;
   font-size: 1.5em;
-  font-weight: 700;
+  font-family: 'Quicksand';
+  font-weight: 600;
   width: 100%;
   z-index: 99;
-  border-bottom: 1px solid black;
+  background-color: rgba(255,255,255,0.95);
+  /* border-bottom: 1px solid black; */
 }
 
 .menu {
@@ -47,7 +54,6 @@ nav img {
 }
 
 .intro {
-  /* border: 1px solid black; */
   top: 0;
   min-height: 65vh;
   padding-top: 35vh;
@@ -87,7 +93,7 @@ h1 {
 }
 
 .welcome {
-  font-weight: 700;
+  font-weight: 600;
   font-size: 1.5em;
 }
 
@@ -112,9 +118,13 @@ h1 {
 
 .line-two {
   width: 9em;
-  height: 0.7em;
-  background-color: #140A82;
+  height: 0.6em;
+  background-color: #f50a14;
   margin: 1rem 0 1.5rem;
+}
+
+.red {
+  color: #f50a14;
 }
 
 /* .yellow {
@@ -127,22 +137,16 @@ h1 {
   z-index: 0;
 } */
 
-.project-card img {
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-  width: 100%;
-}
 
 #projects {
   background-color: #f50a14;
-  height: 85%;
   padding-top: 5%;
   text-align: center;
 }
 
 #projects span {
   font-size: 3.5em;
-  font-weight: 700;
+  font-weight: 600;
   color: #fff;
 }
 
@@ -158,28 +162,160 @@ h1 {
 .project-card {
   background-color: #fff;
   width: 20em;
-  height: 300px;
+  height: auto;
   border-radius: 5px;
   margin:2rem;
 }
 
-.project-title {
-  font-weight: 700;
+.project-card img {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  height: 220px;
+  width: 100%;
+}
+.project-tile {
+  font-weight: 600;
   font-size: 1.5em;
+  font-family: 'Quicksand';
+}
+
+.project-card p {
+  padding: 1em;
 }
 
 #about {
-  background-color: #140A82;
-  color: #fff;
   text-align: center;
+  width: 70%;
+  display: block;
+  margin: 0 auto;
+  padding-top: 5%;
+}
+
+#about span {
+  font-size: 3.5em;
+  font-weight: 600;
+  color: #140A82;
+}
+
+#about p {
+  padding: 2em 0;
+  font-size: 1.125em;
+}
+
+#about ul {
+  padding: 2em 0;
 }
 
 #about ul li {
   display: inline-block;
+}
 
+.fab {
+  font-size: 2em;
+  padding: 0 1rem;
 }
 
 footer {
-  background-color: antiquewhite;
+  margin-top: 10em;
+  margin-bottom: 2em;
   text-align: center;
+}
+
+@media (max-width: 950px) {
+  .intro {
+    min-height: 80vh;
+    padding-top: 20vh;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+  }
+
+  .designer {
+    margin: 0 auto;
+  }
+
+  .dev {
+    margin: 0 auto;
+    padding: 2em 0;
+  }
+
+  .designer p, .dev p {
+    width: 320px;
+  }
+
+  .welcome {
+    font-size: 1.350em;
+  }
+}
+
+@media (max-width: 650px) {
+  .logo span {
+    display: none;
+  }
+
+  .menu {
+    display: flex;
+    justify-content: center;
+    padding: 2em 2em 1em;
+  }
+
+  nav ul {
+    margin-left: unset;
+  }
+
+  h1 {
+    font-size: 4.2em;
+  }
+
+  .line {
+    height: 8em;
+  }
+
+  .project-card {
+    width: 90%;
+    margin:1rem 0;
+  }
+
+  #projects span {
+    font-size: 2.8em;
+  }
+
+  .projects-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: space-around;
+    padding: 0.5em;
+    height: 100%;
+  }
+
+  .fab {
+    font-size: 2em;
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 346px) {
+  .menu {
+    display: flex;
+    justify-content: center;
+    padding: 1em;
+  }
+
+  .project-card {
+    width: 95%;
+    margin:1rem 0;
+  }
+
+  #projects span {
+    font-size: 2.5em;
+  }
+
+  h1 {
+    font-size: 3.8em;
+  }
+
+  .designer p, .dev p {
+    width: 280px;
+  }
 }
